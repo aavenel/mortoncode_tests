@@ -31,7 +31,7 @@ inline uint_fast32_t morton2D_32_splitby2(const uint_fast16_t a){
 
 // ENCODE 2D 64-bit morton code : Magic bits
 inline uint_fast32_t morton2D_32_Encode_magicbits(const uint_fast16_t x, const uint_fast16_t y){
-	return morton2D_32_splitby2(x) | (morton2D_64_splitby2(y) << 1);
+  return morton2D_32_splitby2(x) | (morton2D_32_splitby2(y) << 1);
 }
 
 #endif // MORTON2D_32_H_
